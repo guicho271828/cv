@@ -1,66 +1,192 @@
-% Created 2013-10-07 月 18:04
-\documentclass[10pt,letterpaper]{article}
-\usepackage{aaai}
-\usepackage{fixbib}
-\usepackage{times}
-\usepackage{helvet}
-\usepackage{courier}
+\documentclass[a4paper]{article}
+\usepackage{hyperref}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\theoremstyle{definition}
+\usepackage{tabularx}
 
+%\usepackage{doublespace}
+%\setstretch{1.2}
+
+\usepackage{ae}
 \usepackage{xspace}
-\usepackage{relsize}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-
-\usepackage{aaai_my}
-
-\usepackage{graphicx} % 本番
-
-% \usepackage[dvipdfm]{graphicx}   % development
-
-\usepackage{float}
-\usepackage{abbrev}
-
-\frenchspacing
-% \setlength{\pdfpagewidth}{8.5in}
-% \setlength{\pdfpageheight}{11in}
-% \pdfinfo{
-% /Title Exploiting Iterative Structures from the Planning Domains and Reduce the Complexity
-% /Author Masataro Asai, Alex Fukunaga}
-\setcounter{secnumdepth}{2}
-
-\setlength{\floatsep}{1.5mm}
-\setlength{\textfloatsep}{1.5mm}
-\setlength{\abovecaptionskip}{1.5mm}
-\setlength{\belowcaptionskip}{1.5mm}
-\setlength{\abovedisplayskip}{1.5mm}
-\setlength{\belowdisplayskip}{1.5mm}
-\setlength{\arraycolsep}{1.5mm}
-
-
-% submission must be anonymous
-%\author{Masataro Asai\and Alex Fukunaga}
-\author{Submission XXX}
-\title{Title}
+\usepackage[T1]{fontenc}
+\usepackage{CV}
+\usepackage[left=25mm,right=25mm]{geometry}
 \begin{document}
-\maketitle
-\begin{abstract}
-\input{abstract.tex}
-\end{abstract}
 
-\section{Introduction}
-\input{introduction.tex}
+\pagestyle{empty}
 
-\input{main.org.tex}
+%Ueberschrift
+\begin{center}
+\huge{\textsc{Curriculum Vitae}}
+\vspace{\baselineskip}
 
-aaa \cite{Blum1997}
+\Large{\textsc{Masataro Asai}}
+\vspace{0.5\baselineskip}
 
-\fontsize{9.5pt}{10.5pt}
-\selectfont
+\large{
+Ph.D Candidate
+
+Department of General Systems Studies
+
+Graduate School of Arts and Sciences, University of Tokyo
+}
+
+\vspace{0.8\baselineskip}
+
+\normalsize{
+ Gender: Male. \quad Date of birth: March 28th, 1990. \quad Present Citizenship: Japanese. \\
+ Saginuma-Viola 201 6-23-18 Arima Miyamae-ku Kawasaki Kanagawa, Japan \\
+ % Phone: +81-44-856-9009 \\
+ Cell: +81-50-7576-3690. Email: guicho2.71828@gmail.com \\
+ Website: \url{http://guicho271828.github.io/}}
+\end{center}
+
+
+\section{Education}
+
+\begin{CV}
+ \item[04/2009--03/2013] Received B.Eng in Traffic Simulation at University of Tokyo, Japan
+ 
+ Specialization: Traffic Simulation, Multiagent Model, Spatial Search
+ 
+ Thesis: \emph{Distributed Cooperative Agents in Microscopic Traffic
+ Simulation using St-RRT}; Advisor: S. Yoshimura, Professor. H. Fujii, Research Assistant Professor.
+
+ \item[04/2013--03/2015] M.A. in Artificial Intelligence at University of Tokyo, Japan
+
+ Specialization: Artificial Intelligence, Heuristic Search, Planning, Scheduling, Optimization
+
+ Thesis: \emph{Automated Cyclic Planning for Large Scale planning problems};
+ Advisor: A. Fukunaga, Associate Professor
+\end{CV}
+
+% \section{Undergraduate Thesis}
+
+% In the literature of large-scale traffic simulation,
+% one of the major approaches is called a microscopic multiagent model.
+% It simulates the behavior of each car (an agent)
+% to produce the macroscopic emergent phenomena, e.g.\  traffic-jams,
+% % The accuracy of the model are validated through
+% % the comparison between the k-q (traffic density to average velocity)
+% % curves of simulated and actual environments.
+% % which can be heavily affected by the agent behavior.
+% therefore, developping the appropriate agent model is the key
+% factor to maintain the simulation accuracy.  One critical aspect of
+% agent behavior is called a cooperative behavior. We have implemented an agent
+% interaction model based on Spatiotemporal RRT(St-RRT) to
+% simulate the cooperative behavior and evaluated the
+% effectiveness of our approach.
+
+% \section{Masters Thesis}
+
+% In Automated Planning \& Scheduling (P\&S),
+% domains such as factory assembly requires the planner program to
+% assemble many identical instances of a particular product.  While modern classical
+% planners can generate assembly plans for single instances of a complex
+% product, generating plans to manufacture many instances of a product is
+% beyond the capabilities of standard planners. We proposed ACP, a system
+% which, given a model of a single instance of a product, automatically
+% reformulates and solves the problem as a cyclic planning problem.  We
+% showed that our ACP system can successfully generate
+% cyclic plans for problems which are too large to be solved directly
+% using standard planners.
+
+\section{Working Experience}
+
+\begin{CV}
+
+\item[12/2011--09/2012] Internship at Metamoji.inc, Japan.
+  Prototyped a new graphical drawing-chat system for
+ iPad, with both the server side and the client side programs
+ written in Javascript with Node.js and Titanium Mobile.
+
+\item[04/2012--08/2012] Teaching Assistant in ``Field Work -
+ Introductory Course on Automobiles'', under
+ Project Professor Kohei Kusaka.
+ % The students learn the mechanism and the engineering
+ % design decision of vehicles through vehicle maintenance experience.
+ % prepared the maintainance materials such as lubricant, sealing and
+ % oil filters, moved the vehicle which will be used for maintainance, and
+ Helped and advised the students from a safety standpoint while they
+ learn the mechanism of a vehicle through the maintenance.
+ 
+\item[04/2013--08/2013] Teaching Assistant in ``Experiments in
+ Information and Environmental Sciences'', under
+ Assoc.\ Prof.\ Haruo Saito.
+ % Students are required to
+ % conduct a specific experiment each week. Experiments include reading
+ % the data from the various sensors and importing it to a computer,
+ % during which the students are required to make use of digital circuits.
+ % Tasks also include measuring the output of comparators, invert
+ % amplifiers and filters that must be built by the students.
+ Assisted students assemble and calibrate analog or digital
+ circuits to read the physical value of the
+ experimental equipment.
+
+\item[03/2014--09/2014] Internship at LogicVein.inc,
+ % LogicVein is
+ a developper of a Configuration Management System
+ for network routers and switches.
+ % , an award-winning software that allows the users to
+ % efficently manage the complex network configurations of remote routers and switches.
+ % Useful batch orders can be triggered by their intuitive graphical interface.
+ Worked on % . The materials
+ % consist of: advertisement leaflets, blog articles and
+ the technical product manual (more than 200 pages long). %  The materials
+ % contain both the Japanese and English documents. Some staff are
+ % native English speakers born in United States, who checked and highly
+ % evaluated the quality of the English translation.
+ I also converted the Microsoft Word documents into
+ plain-text documents to set up a publishing system.  It compiles the
+ document into a \LaTeX{}-based pdf and multiple webpages, which is now bundled
+ with their software.
+\end{CV}
+
+\renewcommand{\refname}{Publications}
+
+\let\uline\relax
+\nocite{Asai2014}
+\nocite{Asai2014b}
+\nocite{Asai2015}
+
+\bibliographystyle{plain}
 \bibliography{asai-references}
-\bibliographystyle{aaai}
+
+\section{Professional Services}
+
+Subreviewer for Association for Advancement of Artificial Intelligence (2015).
+
+One of my planning domain CELL-ASSEMBLY is added to SIGAPS ``Real and
+Realistic Planning Domains'' by Patrik Haslum at
+\url{http://users.cecs.anu.edu.au/~patrik/sigaps/index.php?n=Main.RealDomains}
+.
+
+\section{Technical Skills}
+
+\begin{CV}
+ \item[Programming Languages:] C, C++, Java, Python, Bash, JavaScript, Common Lisp
+ \item[Software skills:] jQuery, Titanium Mobile,
+ Node.js, Socket.IO, bootstrap.js, websocket, CSS3, HTML5, Wordpress, NIS, NFS,
+ Torque, network monitoring solutions
+ \item[Hardware skills:] Digital and Analog circuits, microcontrollers(Arduino,PIC), machining
+ \item[Operating Systems:] Ubuntu Linux, Mac OSX
+\end{CV}
+
+\section{Language Ability}
+\begin{table}[h] %\centering
+\begin{tabular}{ll}
+Japanese & native \\
+English  & TOEFL 105/120 (Reading:29/30, Listening:29/30, Speaking:22/30, Writing:25/30, Dec 2014)
+\end{tabular}
+\end{table}
+
+\section{Other activities}
+
+Certification in ``basic course on machining technique'' in 2011 by Prof. Ryu Chikayama.
+
+\href{https://github.com/guicho271828}{Open source activities on github}.
+
+Professioal engineering activity on engine modification
+on Mazda Miata '89-'04 under Project Professor Kohei Kusaka.
+
 \end{document}

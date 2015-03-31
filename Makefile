@@ -4,8 +4,8 @@ reference  = asai-references.bib
 emacs 	   = emacs
 latexmk    = latexmk/latexmk.pl
 styles     = abbrev.sty aaai_my.sty
-sources    = abstract.tex main.org.tex
-max_pages   = 8
+sources    = 
+max_pages   = 3
 
 .SUFFIXES: .tex .org .el .elc .svg
 .SECONDARY: compile-csv-org.elc compile-main-org.elc __tmp1 __tmp2
