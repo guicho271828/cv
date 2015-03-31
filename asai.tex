@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[letterpaper]{article}
 \usepackage{hyperref}
 
 \usepackage{tabularx}
@@ -6,11 +6,13 @@
 %\usepackage{doublespace}
 %\setstretch{1.2}
 
-\usepackage{ae}
+\usepackage{helvet}
+\usepackage{times}
+\usepackage{courier}
 \usepackage{xspace}
 \usepackage[T1]{fontenc}
 \usepackage{CV}
-\usepackage[left=25mm,right=25mm]{geometry}
+\usepackage[top=15mm,left=15mm,right=15mm]{geometry}
 \begin{document}
 
 \pagestyle{empty}
@@ -45,23 +47,20 @@ Graduate School of Arts and Sciences, University of Tokyo
 \section{Education}
 
 \begin{CV}
- \item[04/2009--03/2013] Received B.Eng in Traffic Simulation at University of Tokyo, Japan
- 
- Specialization: Traffic Simulation, Multi-agent Model, Spatial Search
- 
- Thesis: \emph{Distributed Cooperative Agents in Microscopic Traffic
- Simulation using St-RRT}; Advisor: S. Yoshimura, Professor. H. Fujii, Research Assistant Professor.
+ \item[04/2009--03/2013] Received B.Eng in Traffic Simulation at University of Tokyo, Japan.
+ Specialization: Traffic Simulation, Multi-agent Model, Spatial Search.
+ {\small Thesis: \emph{Distributed Cooperative Agents in Microscopic
+ Traffic Simulation using St-RRT}; Advisor: S. Yoshimura,
+ Professor. H. Fujii, Research Assistant Professor.}
 
- \item[04/2013--03/2015] M.A. in Artificial Intelligence at University of Tokyo, Japan
-
+ \item[04/2013--03/2015] M.A. in Artificial Intelligence at University of Tokyo, Japan.
  Specialization: Artificial Intelligence, Heuristic Search, Planning, Scheduling, Optimization
-
- Thesis: \emph{Automated Cyclic Planning for Large Scale planning problems};
- Advisor: A. Fukunaga, Associate Professor
+ {\small Thesis: \emph{Automated Cyclic Planning for Large Scale planning problems};
+ Advisor: A. Fukunaga, Associate Professor}
 \end{CV}
 
 % \section{Undergraduate Thesis}
-
+% 
 % In the literature of large-scale traffic simulation,
 % one of the major approaches is called a microscopic multiagent model.
 % It simulates the behavior of each car (an agent)
@@ -76,9 +75,9 @@ Graduate School of Arts and Sciences, University of Tokyo
 % interaction model based on Spatiotemporal RRT(St-RRT) to
 % simulate the cooperative behavior and evaluated the
 % effectiveness of our approach.
-
+% 
 % \section{Masters Thesis}
-
+% 
 % In Automated Planning \& Scheduling (P\&S),
 % domains such as factory assembly requires the planner program to
 % assemble many identical instances of a particular product.  While modern classical
@@ -91,14 +90,13 @@ Graduate School of Arts and Sciences, University of Tokyo
 % cyclic plans for problems which are too large to be solved directly
 % using standard planners.
 
-\section{Working Experience}
+\section{Work Experience}
 
 \begin{CV}
 
-\item[12/2011--09/2012] Internship at Metamoji.inc, Japan.
-  Prototyped a new graphical drawing-chat system for
- iPad, with both the server side and the client side programs
- written in Javascript with Node.js and Titanium Mobile.
+\item[12/2011--09/2012] Internship at Metamoji.inc.  Prototyped a
+  drawing-chat system for iPad. Both the server and the client side are
+  written in Javascript with Node.js and Titanium Mobile.
 
 \item[04/2012--08/2012] Teaching Assistant in ``Field Work -
  Introductory Course on Automobiles'', under
@@ -107,7 +105,7 @@ Graduate School of Arts and Sciences, University of Tokyo
  % design decision of vehicles through vehicle maintenance experience.
  % prepared the maintainance materials such as lubricant, sealing and
  % oil filters, moved the vehicle which will be used for maintainance, and
- Helped and advised the students from a safety standpoint while they
+ Advised the students from a safety standpoint while they
  learn the mechanism of a vehicle through the maintenance.
  
 \item[04/2013--08/2013] Teaching Assistant in ``Experiments in
@@ -132,14 +130,15 @@ Graduate School of Arts and Sciences, University of Tokyo
  % Useful batch orders can be triggered by their intuitive graphical interface.
  Worked on % . The materials
  % consist of: advertisement leaflets, blog articles and
- the technical product manual (more than 200 pages long). %  The materials
+ the technical product manual (more than 200 pages long) %  The materials
  % contain both the Japanese and English documents. Some staff are
  % native English speakers born in United States, who checked and highly
  % evaluated the quality of the English translation.
- I also converted the Microsoft Word documents into
- plain-text documents to set up a publishing system.  It compiles the
- document into a \LaTeX{}-based pdf and multiple web pages, which is now bundled
- with their software.
+ and converted it into 
+ % i also converted the Microsoft Word documents into
+ % plain-text documents to set up a publishing system.  It compiles the
+ % document into a \LaTeX{}-based pdf and multiple
+ web pages, which is now bundled with their software.
 \end{CV}
 
 \renewcommand{\refname}{Publications}
@@ -164,29 +163,31 @@ Realistic Planning Domains'' by Patrik Haslum at
 \section{Technical Skills}
 
 \begin{CV}
- \item[Programming Languages:] C, C++, Java, Python, Bash, JavaScript, Common Lisp
+ \item[Programming Skills:] Logic-based, Constraint, Object-Oriented,
+ Functional, Type-based programming. Test-driven development, Metaprogramming, DSL, Compile-time optimization.
+ \item[Programming Languages:] C, C++, Java, Python, Ruby, Bash, Javascript/Coffeescript, Common Lisp
  \item[Software skills:] jQuery, Titanium Mobile,
  Node.js, Socket.IO, bootstrap.js, websocket, CSS3, HTML5, Wordpress, NIS, NFS,
- Torque, network monitoring solutions
- \item[Hardware skills:] Digital and Analog circuits, microcontrollers(Arduino,PIC), machining
- \item[Operating Systems:] Ubuntu Linux, Mac OSX
+ Torque, network monitoring, Unix-based OSes
+ \item[Hardware skills:] Digital and Analog circuits, microcontrollers(Arduino,PIC), machining/welding
 \end{CV}
 
 \section{Language Ability}
-\begin{table}[h] %\centering
-\begin{tabular}{ll}
-Japanese & native \\
-English  & TOEFL 105/120 (Reading:29/30, Listening:29/30, Speaking:22/30, Writing:25/30, Dec 2014)
-\end{tabular}
-\end{table}
 
-\section{Other activities}
+\begin{CV}
+ \item[Japanese:] native
+ \item[English:] TOEFL 105/120 (Reading:29/30, Listening:29/30, Speaking:22/30, Writing:25/30, Dec 2014)
+\end{CV}
+
+\section{Community Services / Other activities}
+
+Managing Torque-based compute cluster in the Lab.
 
 Certification in ``basic course on machining technique'' in 2011 by Prof. Ryu Chikayama.
 
-\href{https://github.com/guicho271828}{Open source activities on Github}.
-
 Professional engineering activity on engine modification
 on Mazda Miata '89-'04 under Project Professor Kohei Kusaka.
+
+\href{https://github.com/guicho271828}{Open source activities on Github}.
 
 \end{document}
