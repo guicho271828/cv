@@ -3,7 +3,7 @@ name       = asai
 reference  = asai-references.bib
 emacs 	   = emacs
 latexmk    = latexmk/latexmk.pl
-styles     = abbrev.sty aaai_my.sty
+styles     = mycv.sty
 sources    = 
 max_pages   = 3
 
