@@ -13,7 +13,7 @@
 *.blg
 sources/*
 __*
-nohup.out
+*.out
 */.svn/*
 *.org.*
 *.fdb_latexmk

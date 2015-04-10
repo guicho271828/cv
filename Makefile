@@ -1,5 +1,5 @@
 
-name       = asai
+name       = cv
 reference  = asai-references.bib
 emacs 	   = emacs
 latexmk    = latexmk/latexmk.pl

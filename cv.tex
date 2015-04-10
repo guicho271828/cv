@@ -26,7 +26,7 @@
 \vspace{0.5\baselineskip}
 
 \large{
-Ph.D Candidate
+Doctoral Student
 
 Department of General Systems Studies
 
@@ -57,38 +57,29 @@ Graduate School of Arts and Sciences, University of Tokyo
  Specialization: Artificial Intelligence, Heuristic Search, Planning, Scheduling, Optimization
  {\small Thesis: \emph{Automated Cyclic Planning for Large Scale planning problems};
  Advisor: A. Fukunaga, Associate Professor}
+
+ \item[04/2015--present] Doctoral study in Artificial Intelligence at
+ University of Tokyo, Japan. {\small Advisor: A. Fukunaga, Associate Professor}
 \end{CV}
 
-% \section{Undergraduate Thesis}
-% 
-% In the literature of large-scale traffic simulation,
-% one of the major approaches is called a microscopic multiagent model.
-% It simulates the behavior of each car (an agent)
-% to produce the macroscopic emergent phenomena, e.g.\  traffic-jams,
-% % The accuracy of the model are validated through
-% % the comparison between the k-q (traffic density to average velocity)
-% % curves of simulated and actual environments.
-% % which can be heavily affected by the agent behavior.
-% therefore, developping the appropriate agent model is the key
-% factor to maintain the simulation accuracy.  One critical aspect of
-% agent behavior is called a cooperative behavior. We have implemented an agent
-% interaction model based on Spatiotemporal RRT(St-RRT) to
-% simulate the cooperative behavior and evaluated the
-% effectiveness of our approach.
-% 
-% \section{Masters Thesis}
-% 
-% In Automated Planning \& Scheduling (P\&S),
-% domains such as factory assembly requires the planner program to
-% assemble many identical instances of a particular product.  While modern classical
-% planners can generate assembly plans for single instances of a complex
-% product, generating plans to manufacture many instances of a product is
-% beyond the capabilities of standard planners. We proposed ACP, a system
-% which, given a model of a single instance of a product, automatically
-% reformulates and solves the problem as a cyclic planning problem.  We
-% showed that our ACP system can successfully generate
-% cyclic plans for problems which are too large to be solved directly
-% using standard planners.
+\renewcommand{\refname}{Publications}
+
+\let\uline\relax
+\nocite{Asai2014}
+\nocite{Asai2014b}
+\nocite{Asai2015}
+
+\bibliographystyle{plain}
+\bibliography{asai-references}
+
+\section{Professional Services}
+
+Subreviewer for Association for Advancement of Artificial Intelligence (2015).
+
+One of my planning domain CELL-ASSEMBLY is added to SIGAPS ``Real and
+Realistic Planning Domains'' by Patrik Haslum at
+\url{http://users.cecs.anu.edu.au/~patrik/sigaps/index.php?n=Main.RealDomains}
+.
 
 \section{Work Experience}
 
@@ -141,35 +132,16 @@ Graduate School of Arts and Sciences, University of Tokyo
  web pages, which is now bundled with their software.
 \end{CV}
 
-\renewcommand{\refname}{Publications}
-
-\let\uline\relax
-\nocite{Asai2014}
-\nocite{Asai2014b}
-\nocite{Asai2015}
-
-\bibliographystyle{plain}
-\bibliography{asai-references}
-
-\section{Professional Services}
-
-Subreviewer for Association for Advancement of Artificial Intelligence (2015).
-
-One of my planning domain CELL-ASSEMBLY is added to SIGAPS ``Real and
-Realistic Planning Domains'' by Patrik Haslum at
-\url{http://users.cecs.anu.edu.au/~patrik/sigaps/index.php?n=Main.RealDomains}
-.
-
 \section{Technical Skills}
 
 \begin{CV}
  \item[Programming Skills:] Logic-based, Constraint, Object-Oriented,
- Functional, Type-based programming. Test-driven development, Metaprogramming, DSL, Compile-time optimization.
+ Functional, Type-based programming. Metaprogramming, DSL,
+ Compile-time optimization. Applying TDD and Continuous Integration in practice.
  \item[Programming Languages:] C, C++, Java, Python, Ruby, Bash,
  Javascript/Coffeescript, Emacs Lisp, Common Lisp
- \item[Software skills:] Git, jQuery, Titanium Mobile,
- Node.js, Socket.IO, bootstrap.js, websocket, CSS3, HTML5, Wordpress, NIS, NFS,
- Torque, network monitoring, Unix-based OSes
+ \item[Software skills:] Git, jQuery, Node.js, bootstrap.js, CSS3,
+ HTML5, NIS, NFS, Torque, network monitoring, Unix-based OSes
  \item[Hardware skills:] Digital and Analog circuits, microcontrollers(Arduino,PIC), machining/welding
 \end{CV}
 
@@ -178,8 +150,8 @@ Realistic Planning Domains'' by Patrik Haslum at
 \begin{CV}
  \item[Japanese:] native
  \item[English:] TOEFL 105/120 (Reading:29/30, Listening:29/30,
- Speaking:22/30, Writing:25/30, Dec 2014). Enjoys the daily discussion
- on programming on Reddit, Github, Skype and IRC channel.
+ Speaking:22/30, Writing:25/30, Dec 2014). I enjoy discussion
+ on programming on Reddit, Github, Skype and IRC channels almost every day.
 \end{CV}
 
 \section{Community Services / Other activities}
@@ -189,28 +161,68 @@ activities on Github}. Notable projects are:
 
 (2015) \href{https://github.com/guicho271828/trivia}{trivia},
 \href{https://github.com/guicho271828/trivia.balland2006}{trivia.balland2006}
-: Trivia is a pattern matching compiler that is compatible with
-Optima (``state of the art''). It shares the same testing code with Optima and acts as a
-drop-in replacement. Patterns compiled with Trivia runs faster than
-Optima, and Trivia is more extensible.
+: Trivia is a pattern matching compiler that is compatible with Optima
+(``state of the art'' pattern matching compiler in Common Lisp). It
+shares the same testing code with Optima and acts as a drop-in
+replacement, but Trivia has a cleaner code base, runs faster and is
+more extensible. It gained several stars on github.
 
 (2012) macascript : (now obsolete) a homoiconic language that compiles
 into javascript.
 
 ----
 
-(2013--present) Managing Torque-based compute clusters in the Laboratory. Maintaining
+(2013--present) Managing Torque-based compute clusters in the laboratory. Maintaining
 the NFS/NIS-based file sharing and login name synchronization.
 
-(2011--2012) Professional engineering activity on engine modification on Mazda Miata
-'89-'04 under Project Professor Kohei Kusaka. Activities include full
-engine rebuilding, mechanical engineering (compression ratio
-optimization), fuel map / ignition timing map optimization, development
-of variable resonance intake controller.
+(2011--2012) Professional engineering activity on engine modification on
+Mazda Miata '89-'04 under Project Professor Kohei Kusaka. Activities
+include full engine rebuilding, mechanical engineering (I changed the
+compression ratio by milling the engine header by 0.70mm using a large
+face mill), fuel map / ignition timing optimization (with
+Javascript-based visualizer \& hex-file editor), development of
+variable resonance intake controller (Arduino).
 
 (2011) Certification in ``basic course on machining technique'' by Prof. Ryu Chikayama.
 
 (2005--2007) Development of Bipedal robot with embedded microcontroller
 (Microchip\textregistered PIC and analog servo motors)
+
+
+\section{Undergraduate Thesis Abstract}
+
+{\small
+In the literature of large-scale traffic simulation,
+one of the major approaches is called a microscopic multiagent model.
+It simulates the behavior of each car (an agent)
+to produce the macroscopic emergent phenomena, e.g.\  traffic-jams,
+% The accuracy of the model are validated through
+% the comparison between the k-q (traffic density to average velocity)
+% curves of simulated and actual environments.
+% which can be heavily affected by the agent behavior.
+therefore, developping the appropriate agent model is the key
+factor to maintain the simulation accuracy.  One critical aspect of
+agent behavior is called a cooperative behavior. We have implemented an agent
+interaction model based on Spatiotemporal RRT(St-RRT) to
+simulate the cooperative behavior and evaluated the
+effectiveness of our approach.
+}
+
+\section{Masters Thesis Abstract}
+
+{\small
+In Automated Planning \& Scheduling (P\&S),
+domains such as factory assembly requires the planner program to
+assemble many identical instances of a particular product.  While modern classical
+planners can generate assembly plans for single instances of a complex
+product, generating plans to manufacture many instances of a product is
+beyond the capabilities of standard planners. We proposed ACP, a system
+which, given a model of a single instance of a product, automatically
+reformulates and solves the problem as a cyclic planning problem.  We
+showed that our ACP system can successfully generate
+cyclic plans for problems which are too large to be solved directly
+using standard planners.
+}
+
 
 \end{document}
