@@ -27,6 +27,10 @@ en_pdf: $(name).tex imgs $(sources) $(styles) $(reference)
 		   -latexoption="-halt-on-error" \
 		   -bibtex \
 		   $<
+	$(latexmk) -pdf \
+		   -latexoption="-halt-on-error" \
+		   -bibtex \
+		   coverletter.tex
 
 ja_pdf: $(name).tex imgs $(sources) $(styles) $(reference)
 	$(latexmk) -r rc_ja.pl \
