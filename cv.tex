@@ -9,6 +9,7 @@
 \usepackage{helvet}
 \usepackage{times}
 \usepackage{courier}
+\usepackage{relsize}
 \usepackage{xspace}
 \usepackage[T1]{fontenc}
 \usepackage{mycv}
@@ -43,22 +44,27 @@ Graduate School of Arts and Sciences, University of Tokyo
  Website: \url{http://guicho271828.github.io/}}
 \end{center}
 
+\section{Main Research Interest}
+
+Domain-independent search/planning techniques. Marrying deep learning and classical AI.
 
 \section{Education}
 
 \begin{CV}
  \item[04/2013--03/2018] (expected) \textit{Ph.D student, M.A.} (received on 03/2015).
- Specialization: Artificial Intelligence, Heuristic Search, Planning, Scheduling, Optimization.
+ Artificial Intelligence, Heuristic Search, Planning, Scheduling, Optimization.
  {\small Masters Thesis: \emph{Automated Cyclic Planning for Large Scale Planning Problems}; Advisor: A. Fukunaga}
 
  \item[04/2009--03/2013] B.Eng in Traffic Simulation.
- Specialization: Traffic Simulation, Multi-agent Model, Spatial Search.
+ Multi-agent Model, Spatial Search.
  {\small Thesis: \emph{Distributed Cooperative Agents in Microscopic
  Traffic Simulation using St-RRT}; Advisor: S. Yoshimura. H. Fujii.}
 \end{CV}
 
 \renewcommand{\refname}{Recent Publications \& Presentations}
 
+{
+\relsize{-1}
 \let\uline\relax
 \nocite{Asai2016}
 \nocite{Asai2015}
@@ -69,6 +75,7 @@ Graduate School of Arts and Sciences, University of Tokyo
 
 \bibliographystyle{unsrt}
 \bibliography{asai-references}
+}
 
 \section{Professional Services}
 
@@ -85,16 +92,16 @@ Subreviewer for ICAPS (2016), AAAI (2015).
 \section{Technical Skill}
 
 \begin{CV}
- \item[Programming skill:] Familiarity with all of: 
+ \item[Programming:] %Familiarity with all of: 
  Object-Oriented programming,
  Functional programming,
  Logic / Rule-based programming,
  Metaprogramming and low-level optimization,
  Domain Specific Language, compile-time optimization.
- \item[Development skill:] Comfortable with the use of Git,
+ \item[Development:] Comfortable with the use of Git,
  GitHub Flow development model, Test-Driven Development, Unit
  Testing, and Continuous Integration using Travis-CI / CircleCI.
- \item[Programming Languages:]
+ \item[Languages:]
  (professional) Common Lisp, C++, Bash, Javascript / Coffeescript, C,
  (intermediate) Java, Python,
  (elementary)   Ruby
