@@ -14,10 +14,10 @@ max_pages   = 3
 all: en
 
 check_pages:
-	./check_pages.sh $(max_pages) $(name)
+	-./check_pages.sh $(max_pages) $(name)
 
 check_overflow: $(name).log
-	./check_overflow.sh $(name).log
+	-./check_overflow.sh $(name).log
 
 en:	en_pdf check_pages check_overflow
 ja:	ja_pdf check_pages check_overflow
