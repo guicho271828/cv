@@ -11,18 +11,21 @@ max_pages   = 3
 .SECONDARY: compile-csv-org.elc compile-main-org.elc __tmp1 __tmp2
 .PHONY: all en ja open imgs clean allclean check_pages check_overflow en_pdf ja_pdf automake submission archive
 
+$(name).log: $(name).pdf
+
 all: en
 
-check_pages:
+check_pages: $(name).pdf
 	-./check_pages.sh $(max_pages) $(name)
 
 check_overflow: $(name).log
 	-./check_overflow.sh $(name).log
 
-en:	en_pdf check_pages check_overflow
-ja:	ja_pdf check_pages check_overflow
+en:	check_pages check_overflow
+ja:	check_pages check_overflow
 
-en_pdf: $(name).tex imgs $(sources) $(styles) $(reference)
+
+$(name).pdf: $(name).tex imgs $(sources) $(styles) $(reference)
 	$(latexmk) -pdf \
 		   -latexoption="-halt-on-error" \
 		   -bibtex \
@@ -31,13 +34,6 @@ en_pdf: $(name).tex imgs $(sources) $(styles) $(reference)
 		   -latexoption="-halt-on-error" \
 		   -bibtex \
 		   coverletter.tex
-
-ja_pdf: $(name).tex imgs $(sources) $(styles) $(reference)
-	$(latexmk) -r rc_ja.pl \
-		   -latexoption="-halt-on-error" \
-		   -pdfdvi \
-		   -bibtex \
-		   $<
 
 open: $(name).pdf
 	nohup evince $< &>/dev/null &
