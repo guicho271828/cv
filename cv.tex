@@ -1,4 +1,4 @@
-\documentclass[letterpaper,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \usepackage{hyperref}
 
 \usepackage{tabularx}
@@ -27,20 +27,18 @@
 {\Large\textsc{Masataro Asai}}
 \vspace{0.5\baselineskip}
 
-% \large
- {
+\small
+{
 Doctoral Student, Department of General Systems Studies,
-
 Graduate School of Arts and Sciences, University of Tokyo.
 }
 
-\vspace{0.4\baselineskip}
+% \vspace{0.4\baselineskip}
 
  % Male, born March 28th, 1990. Japanese. \\
  % Address: Saginuma-Viola 201 6-23-18 Arima Miyamae-ku Kawasaki Kanagawa, Japan. \\
  % Phone: +81-44-856-9009 \\
- guicho2.71828@gmail.com, +81-50-5534-1357 (Skype: guicho2.71828)\\
- \url{http://guicho271828.github.io/}
+ guicho2.71828@gmail.com, +81-50-5534-1357 (Skype: guicho2.71828) \url{guicho271828.github.io/}
 \end{center}
 
 \section{Main Research Interest}
@@ -49,8 +47,7 @@ Graduate School of Arts and Sciences, University of Tokyo.
 
 \begin{figure}[h]
  \centering
- \includegraphics[width=\textwidth]{img/static/mnist.png}
- \includegraphics[width=\textwidth]{img/static/lenna.png}
+ \includegraphics[width=0.8\textwidth]{img/static/mnist.png}
  \caption{Result of visually solving 8-puzzle using Deep Neural Network and Classical Planner}
 \end{figure}
 
@@ -73,34 +70,12 @@ Graduate School of Arts and Sciences, University of Tokyo.
 
 \textbf{Research Fellow (DC2), Japan Society for the Promotion of Science} (Equivalent of NSF Grant in Japan; stipends and individual research budget of 10000 USD/year)(Apr. 2016-)
 
+\textbf{JSAI Annual Conference Student Incentive Award}, The Japanese Society for Artificial Intelligence (Mar. 2017)
 
 % One of my planning domain CELL-ASSEMBLY is added to SIGAPS ``Real and
 % Realistic Planning Domains'' by Patrik Haslum at
 % \url{http://users.cecs.anu.edu.au/~patrik/sigaps/index.php?n=Main.RealDomains}
 % .
-
-\renewcommand{\refname}{Selected Publications}
-
-{
-% \setlength{\bibsep}{-0.1em}
-% \setlength{\parsep}{-0.1em}
-% \setlength{\baselineskip}{-0.1em}
-% \setlength{\itemsep}{-0.1em}
-\let\uline\relax
-\nocite{Asai2017b}
-\nocite{Asai2017}
-\nocite{Asai2016b}
-\nocite{Asai2016}
-\nocite{Asai2015}
-\nocite{Asai2014}
-
-% \nocite{Endo2016}
-% \nocite{Asai2014b}
-
-\bibliographystyle{unsrt}
-\bibliography{asai-references}
-}
-
 
 \section{Work Experience}
 
@@ -109,24 +84,24 @@ Graduate School of Arts and Sciences, University of Tokyo.
  Project name: Robust Activity Planning and Scheduling with Multi-Modal Travel.
  Developed an efficient algorithm for multi-worker routing.
 
-\item[03/2014--09/2014] Internship at LogicVein.inc,
- % LogicVein is
- a developer of a Configuration Management System
- for network devices.
- % , an award-winning software that allows the users to
- % efficently manage the complex network configurations of remote routers and switches.
- % Useful batch orders can be triggered by their intuitive graphical interface.
- Worked on % . The materials
- % consist of: advertisement leaflets, blog articles and
- a technical product manual (>200 pages long) %  The materials
- % contain both the Japanese and English documents. Some staff are
- % native English speakers born in United States, who checked and highly
- % evaluated the quality of the English translation.
- % and converted it into 
- % i also converted the Microsoft Word documents into
- % plain-text documents to set up a publishing system.  It compiles the
- % document into a \LaTeX{}-based pdf and multiple
- and its HTML5 conversion.
+% \item[03/2014--09/2014] Internship at LogicVein.inc,
+%  % LogicVein is
+%  a developer of a Configuration Management System
+%  for network devices.
+%  % , an award-winning software that allows the users to
+%  % efficently manage the complex network configurations of remote routers and switches.
+%  % Useful batch orders can be triggered by their intuitive graphical interface.
+%  Worked on % . The materials
+%  % consist of: advertisement leaflets, blog articles and
+%  a technical product manual (>200 pages long) %  The materials
+%  % contain both the Japanese and English documents. Some staff are
+%  % native English speakers born in United States, who checked and highly
+%  % evaluated the quality of the English translation.
+%  % and converted it into 
+%  % i also converted the Microsoft Word documents into
+%  % plain-text documents to set up a publishing system.  It compiles the
+%  % document into a \LaTeX{}-based pdf and multiple
+%  and its HTML5 conversion.
 
 % \item[04/2013--08/2013] Teaching Assistant in ``Experiments in
 %  Information and Environmental Sciences'', under
@@ -153,6 +128,30 @@ Graduate School of Arts and Sciences, University of Tokyo.
   drawing-chat system for iPad. Both the server/client sides are
   written in Javascript with Node.js and Titanium Mobile.
 \end{CV}
+
+\renewcommand{\refname}{Selected Publications}
+
+{
+% \setlength{\bibsep}{-0.1em}
+% \setlength{\parsep}{-0.1em}
+% \setlength{\baselineskip}{-0.1em}
+% \setlength{\itemsep}{-0.1em}
+\let\uline\relax
+\nocite{Asai2017b}
+\nocite{Asai2017}
+\nocite{Asai2016b}
+\nocite{Asai2016}
+\nocite{Asai2015}
+\nocite{Asai2014}
+
+% \nocite{Endo2016}
+% \nocite{Asai2014b}
+
+\bibliographystyle{unsrt}
+\bibliography{asai-references}
+}
+
+
 
 
 \section{Technical Skill}
@@ -251,5 +250,17 @@ a vender-agnostic Portable OpenCL implementation in C and C++.
 % using standard planners.
 % }
 
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=\textwidth]{img/static/lenna.png}
+ \caption{Result of solving Lenna-8-puzzle using Deep Neural Network and Classical Planner. \textbf{It does not need reward function nor expert solution trace.}}
+\end{figure}
+% 
+% \begin{figure}[h]
+%  \centering
+%  \includegraphics[width=\textwidth]{img/static/lightsout.png}
+%  \includegraphics[width=\textwidth]{img/static/lightsout-rounded.png}
+%  \caption{The same system solving 3x3 Lights-Out game. (Top: Original results) (Bottom: Rounded to 0/1)}
+% \end{figure}
 
 \end{document}
