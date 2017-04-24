@@ -1,36 +1,28 @@
 
-where-am-i = $(CURDIR)/$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))
-OVERWRITEBB=$(shell dirname $(call where-am-i))/overwritebb.sh
-BB=$(shell ls *.svg | sed -e "s/svg/bb/g")
-SBB=$(shell ls *.svg | sed -e "s/svg/sbb/g")
-MBB=$(shell ls *.svg | sed -e "s/svg/mbb/g")
-XBB=$(shell ls *.svg | sed -e "s/svg/xbb/g")
-PNG=$(shell ls *.svg | sed -e "s/svg/png/g")
+.SECONDEXPANSION:
 
-BBTYPE=SBB
+.PRECIOUS: %.png %.pdf
 
 .PHONY:	clean all
 
-all: $(PNG) $($(BBTYPE))
+all: $(shell find -name "*.svg" -o -name "*.png" -o -name "*.jpg" | sed -e "s/\(png\|jpg\|svg\)/xbb/g")
 
-%.colorpng : %.svg
-	inkscape -z -f $< -e $*.colorpng -d 300
+%.xbb : %.jpg Makefile
+	ebb -x $<
 
-%.png : %.colorpng
-	# convert $< -grayscale Rec709Luminance $@
-	convert $< -colorspace gray $@
-%.mbb : %.png
-	ebb -O -m $< > $*.bb
-	cp -f $*.bb $@
+%.xbb : %.png Makefile
+	ebb -x $<
 
-%.sbb : %.png
-	ebb -O $< > $*.bb
-	cp -f $*.bb $@
+%.xbb : %.pdf
+	ebb -x $<
 
-%.xbb : %.png
-	ebb -O -x $< > $*.bb
-	cp -f $*.bb $@
+%.pdf : %.svg
+	inkscape -f $< -A $*.pdf -d 150
+# %.png : %.svg
+# 	inkscape -f $< -e $*.png -d 150
+#	convert $< $*.png
+#	if you want to use imagemagick, comment out 'inkscape...' and use 'convert...'
 
 clean:
-	rm -f *.png *bb
-
+	-find -name "*.xbb" -delete
+	-rm *.png *.pdf
