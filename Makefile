@@ -4,75 +4,52 @@ reference  = asai-references.bib
 emacs 	   = emacs
 latexmk    = latexmk/latexmk.pl
 styles     = mycv.sty
-sources    = 
+sources    =
 max_pages   = 3
 
-.SUFFIXES: .tex .org .el .elc .svg
-.SECONDARY: compile-csv-org.elc compile-main-org.elc __tmp1 __tmp2
-.PHONY: all en ja open imgs clean allclean check_pages check_overflow en_pdf ja_pdf automake submission archive
+$(info $(sources))
 
-$(name).log: $(name).pdf
+.PHONY: all en ja open imgs clean allclean auto \
+	submission archive clean-submission
 
 all: en
 
-check_pages: $(name).pdf
-	-./check_pages.sh $(max_pages) $(name)
+en: $(name).pdf
 
-check_overflow: $(name).log
-	-./check_overflow.sh $(name).log
+$(name).tex:
+	echo "\input{main.tex}" > $@
 
-en:	check_pages check_overflow
-ja:	check_pages check_overflow
+$(name).log $(name).fls: $(name).pdf
 
-
-$(name).pdf: $(name).tex imgs $(sources) $(styles) $(reference)
-	$(latexmk) -pdf \
-		   -latexoption="-halt-on-error" \
+%.pdf: %.tex imgs $(sources)
+	-$(latexmk) -pdf \
+		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
 		   $<
-	$(latexmk) -pdf \
-		   -latexoption="-halt-on-error" \
-		   -bibtex \
-		   coverletter.tex
 
+ifeq ($(UNAME), Darwin)
 open: $(name).pdf
-	nohup evince $< &>/dev/null &
+	open $< &>/dev/null
+endif
+ifeq ($(UNAME), Linux)
+open: $(name).pdf
+	nohup xdg-open $< &>/dev/null &
+endif
 
-automake: all
-	nohup ./make-periodically.sh &
+auto:
+	+./make-periodically.sh
 
 imgs:
 	$(MAKE) -C img
 
-%.csv: %.csvorg compile-csv-org.elc
-	$(emacs) --batch --quick --script compile-csv-org.elc --eval "(progn (load-file \"compile-csv-org.el\")(compile-org \"$<\" \"$@\"))"
-
-img/%.tex: %.gnuplot %.csv
-	gnuplot $<
-
-img/%.svg: %.gnuplot %.csv
-	gnuplot $<
-
-%.org.tex: %.org compile-main-org.elc
-	$(emacs) --batch --quick \
-		 --script compile-main-org.elc \
-		 --eval "(compile-org \"$<\" \"$@\")"
-
-%.elc : %.el
-	$(emacs) -Q --batch -f batch-byte-compile $<
-
-clean:
-	-rm *~ *.aux *.dvi *.log *.toc *.bbl \
+clean: clean-submission
+	-rm -r *~ *.aux *.dvi *.log *.toc *.bbl \
 		*.blg *.utf8 *.elc $(name).pdf \
-		*.fdb_latexmk __* *.fls
-	-rm -r sources
+		*.fdb_latexmk __* *.fls *.subm* \
+		_minted*
 
 allclean: clean
 	$(MAKE) -C img clean
+	rm target
 
-submission: en
-	-rm -r sources
-	./aaai_script.sh $(name).tex
 
-archive: submission
-	cd sources/ ; tar cvzf $(name).tar.gz * ; mv $(name).tar.gz ../
