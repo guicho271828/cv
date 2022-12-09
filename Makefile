@@ -26,6 +26,7 @@ $(name).log $(name).fls: $(name).pdf
 		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
 		   $<
+	cp $@ ~/Documents/US-document/2022-EB1/initiation/02/
 
 ifeq ($(UNAME), Darwin)
 open: $(name).pdf
