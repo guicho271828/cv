@@ -14,7 +14,7 @@ $(info $(sources))
 
 all: en
 
-en: cv.pdf list-of-publications.pdf list-of-presentations.pdf list-of-prestigious.pdf
+en: cv.pdf list-of-publications.pdf list-of-presentations.pdf list-of-prestigious.pdf list-of-major-media.pdf
 
 $(name).tex:
 	echo "\input{main.tex}" > $@
