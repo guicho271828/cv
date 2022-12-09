@@ -14,19 +14,33 @@ $(info $(sources))
 
 all: en
 
-en: $(name).pdf
+en: cv.pdf list-of-publications.pdf list-of-presentations.pdf
 
 $(name).tex:
 	echo "\input{main.tex}" > $@
 
 $(name).log $(name).fls: $(name).pdf
 
-%.pdf: %.tex imgs $(sources)
+cv.pdf: cv.tex imgs $(sources)
 	-$(latexmk) -pdf \
 		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
 		   $<
 	cp $@ ~/Documents/US-document/2022-EB1/initiation/02/
+
+list-of-publications.pdf: list-of-publications.tex imgs $(sources)
+	-$(latexmk) -pdf \
+		   -latexoption="-halt-on-error -shell-escape" \
+		   -bibtex \
+		   $<
+	cp $@ ~/Documents/US-document/2022-EB1/initiation/06/
+
+list-of-presentations.pdf: list-of-presentations.tex imgs $(sources)
+	-$(latexmk) -pdf \
+		   -latexoption="-halt-on-error -shell-escape" \
+		   -bibtex \
+		   $<
+	cp $@ ~/Documents/US-document/2022-EB1/initiation/06/
 
 ifeq ($(UNAME), Darwin)
 open: $(name).pdf
@@ -38,7 +52,7 @@ open: $(name).pdf
 endif
 
 auto:
-	+./make-periodically.sh
+	+./make-periodically.sh -j 1
 
 imgs:
 	$(MAKE) -C img
