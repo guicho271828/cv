@@ -9,7 +9,7 @@ max_pages   = 3
 
 $(info $(sources))
 
-.PHONY: all en ja open imgs clean allclean auto \
+.PHONY: all en ja open clean allclean auto \
 	submission archive clean-submission
 
 all: en
@@ -21,14 +21,14 @@ $(name).tex:
 
 $(name).log $(name).fls: $(name).pdf
 
-cv.pdf: cv.tex imgs $(sources)
+cv.pdf: cv.tex $(sources)
 	-$(latexmk) -pdf \
 		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
 		   $<
 	cp $@ ~/Documents/US-document/2022-EB1/initiation/02/
 
-list-of-%.pdf: list-of-%.tex imgs $(sources)
+list-of-%.pdf: list-of-%.tex $(sources)
 	-$(latexmk) -pdf \
 		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
@@ -48,12 +48,9 @@ endif
 auto:
 	+./make-periodically.sh -j 1
 
-imgs:
-	$(MAKE) -C img
-
 clean: clean-submission
 	-rm -r *~ *.aux *.dvi *.log *.toc *.bbl \
-		*.blg *.utf8 *.elc $(name).pdf \
+		*.blg *.utf8 *.elc *.pdf *.out \
 		*.fdb_latexmk __* *.fls *.subm* \
 		_minted*
 
