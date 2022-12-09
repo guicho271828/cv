@@ -4,8 +4,8 @@ reference  = asai-references.bib
 emacs 	   = emacs
 latexmk    = latexmk/latexmk.pl
 styles     = mycv.sty
-sources    =
-max_pages   = 3
+sources    = $(styles) $(reference)
+max_pages  = 3
 
 $(info $(sources))
 
@@ -14,7 +14,7 @@ $(info $(sources))
 
 all: en
 
-en: cv.pdf list-of-publications.pdf list-of-presentations.pdf list-of-prestigious.pdf list-of-major-media.pdf
+en: list-of-major-media.pdf cv.pdf list-of-publications.pdf list-of-presentations.pdf list-of-prestigious.pdf
 
 $(name).tex:
 	echo "\input{main.tex}" > $@
