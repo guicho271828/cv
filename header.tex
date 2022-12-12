@@ -15,8 +15,11 @@
 \usepackage{mycv}
 \usepackage[top=15mm,left=15mm,right=15mm,bottom=15mm]{geometry}
 \usepackage[subsectionbib]{bibunits}
-\defaultbibliographystyle{unsrt}
+\usepackage{chicago}            %required for chicago bib style
+\defaultbibliographystyle{chicago}
 \defaultbibliography{asai-references}
 \bibliographyunit[\section]
+
+
 \usepackage{xparse}
 \RenewDocumentCommand{\subsection}{s m}{}
