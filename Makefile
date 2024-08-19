@@ -14,7 +14,7 @@ $(info $(sources))
 
 all: en
 
-en: list-of-major-media.pdf cv.pdf list-of-publications.pdf list-of-presentations.pdf list-of-prestigious.pdf
+en: cv.pdf
 
 $(name).tex:
 	echo "\input{main.tex}" > $@
@@ -26,14 +26,6 @@ cv.pdf: cv.tex $(sources)
 		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
 		   $<
-	cp $@ ~/Documents/US-document/2022-EB1/initiation/02/
-
-list-of-%.pdf: list-of-%.tex $(sources)
-	-$(latexmk) -pdf \
-		   -latexoption="-halt-on-error -shell-escape" \
-		   -bibtex \
-		   $<
-	cp $@ ~/Documents/US-document/2022-EB1/initiation/06/
 
 
 ifeq ($(UNAME), Darwin)
