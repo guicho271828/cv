@@ -3,14 +3,14 @@ name       = cv
 reference  = asai-references.bib
 emacs 	   = emacs
 latexmk    = latexmk/latexmk.pl
-styles     = mycv.sty
+styles     = mycv.sty header.sty
 sources    = $(styles) $(reference)
 max_pages  = 3
 
 $(info $(sources))
 
 .PHONY: all en ja open clean allclean auto \
-	submission archive clean-submission
+	submission archive clean-submission img
 
 all: en
 
@@ -21,12 +21,14 @@ $(name).tex:
 
 $(name).log $(name).fls: $(name).pdf
 
-cv.pdf: cv.tex $(sources)
+cv.pdf: cv.tex $(sources) img
 	-$(latexmk) -pdf \
 		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
 		   $<
 
+img:
+	+$(MAKE) -C img
 
 ifeq ($(UNAME), Darwin)
 open: $(name).pdf
