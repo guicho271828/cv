@@ -22,6 +22,7 @@
 \usepackage{courier}
 \usepackage{xspace}
 \usepackage[T1]{fontenc}
+\usepackage{hyperref}
 % \usepackage{mycv}
 % \usepackage[top=15mm,left=15mm,right=15mm,bottom=15mm]{geometry}
 
@@ -35,13 +36,15 @@
 %  PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-\setkomavar{fromname}{Masataro Asai} % Your name
-\setkomavar{fromaddress}{201 Saginuma Viola 6-23-18 Arima\\Miyamae
-Kawasaki\\Kanagawa\\Japan} % Your address
-\setkomavar{fromphone}{+81-50-7576-3690} % Your phone number
+\setkomavar{fromname}{Masataro Asai, Ph.D} % Your name
+\setkomavar{fromaddress}{60 Cross St. E APT224 Somerville 02145, MA, USA} % Your address
+\setkomavar{fromphone}{+1-857-999-5722} % Your phone number
 \setkomavar{fromemail}{guicho2.71828@gmail.com} % Your email address
-\setkomavar{place}{} % City written before the date, put your city here if you want this
+\setkomavar{place}{Somerville} % City written before the date, put your city here if you want this
 \setkomavar{signature}{Masataro Asai} % Your name as you want it to appear in the signature
+\def\position{POSITION} % position name
+\def\company{COMPANY} % position name
+\def\companyaddress{ADDRESS} % position name
 
 % These are not used in this document, uncomment if you would like to use them and refer to them as \usekomavar{name}
 %\setkomavar{fromfax}{+1 (1)23 456789} % Your fax number
@@ -56,9 +59,9 @@ Kawasaki\\Kanagawa\\Japan} % Your address
 \centering
 {% \addfontfeature{LetterSpace=20.0}
 \Huge\scshape \usekomavar{fromname}}\\[5mm]
-Doctoral Student\\
-Department of General Systems Studies\\
-Graduate School of Arts and Sciences, University of Tokyo
+Staff Research Scientist\\
+MIT-IBM Watson AI Lab\\
+IBM Research Cambridge
 } % Your current job title
 
 %----------------------------------------------------------------------------------------
@@ -86,25 +89,22 @@ Graduate School of Arts and Sciences, University of Tokyo
 %----------------------------------------------------------------------------------------
 
 \begin{letter}{ % Address of the company you are applying to
-Ireland Research Lab\\
-Dublin, Ireland
-% HR Dept. --- Corporation\\
-% 123 Pleasant Lane\\
-% 12345 City, State
+\company\\
+\companyaddress
 }
 
 % \setkomavar{subject}{Cover Letter}
 % This is the bold text saying 'Cover Letter', remove it if you don't like it
 
-\opening{Dear Recruiter,}
+\opening{To whom it may concern,}
 
 \setlength{\parskip}{0.4em}
 % PARAGRAPH ONE: State the reason for the letter, name the position or
  % type of work you are applying for and identify the source from which
- % you learned of the opening.\\ 
+ % you learned of the opening.\\
 
-Please find enclosed my CV in application for the position of Research
- Intern (22260BR). Among the list of projects posted on ({\small
+Please find enclosed my CV in application for the position of \position.
+ Among the list of projects posted on ({\small
  researcher.watson.ibm.com / researcher / view\_group.php ? id=6504}), I
  found one project very interesting because it matches my
  specialization. The project is titled as ``Robust Activity Planning and
@@ -118,7 +118,7 @@ Please find enclosed my CV in application for the position of Research
 % achievements or unique qualifications. Try not to repeat the same
 % information the reader will find in the resume. The purpose of this
 % section is to strengthen your resume by providing details which bring
-% your experiences to life.\\ 
+% your experiences to life.\\
 
 My list of publications shows that I am well prepared for this
 position. I made my papers regularly accepted in the competitive
@@ -157,7 +157,7 @@ I can use these abilities for the rapid prototyping and the fast development cyc
 % PARAGRAPH THREE: Request a personal interview and indicate your
  % flexibility as to the time and place. Repeat your phone number in the
  % letter. End the letter by thanking the employer for taking the time
- % to consider your credentials.\\ 
+ % to consider your credentials.\\
 
 Thank you for the valuable time to consider this application. I look forward to hearing from you in the near future.
 
@@ -166,27 +166,27 @@ Sincerely yours, \\
 \end{letter}
 
 % Example:
-% 
+%
 % Dear Mr Black,
-% 
+%
 % Please find enclosed my CV in application for the post advertised in the
 % Guardian on 30 November.
-% 
+%
 % The nature of my degree course has prepared me for this position. It
 % involved a great deal of independent research, requiring initiative,
 % self-motivation and a wide range of skills. For one course, [insert
 % course], an understanding of the [insert sector] industry was
 % essential. I found this subject very stimulating.
-% 
+%
 % I am a fast and accurate writer, with a keen eye for detail and I should
 % be very grateful for the opportunity to progress to market reporting. I
 % am able to take on the responsibility of this position immediately, and
 % have the enthusiasm and determination to ensure that I make a success
 % of it.
-% 
+%
 % Thank you for taking the time to consider this application and I look
 % forward to hearing from you in the near future.
-% 
+%
 % Yours sincerely
 
 
