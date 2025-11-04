@@ -1,10 +1,8 @@
 
 name       = cv
-reference  = asai-references.bib
 emacs 	   = emacs
 latexmk    = latexmk/latexmk.pl
-styles     = mycv.sty header.sty
-sources    = $(styles) $(reference)
+sources    = $(wildcard *.sty) $(wildcard *.tex) $(wildcard *.bib)
 max_pages  = 3
 
 $(info $(sources))
@@ -14,14 +12,14 @@ $(info $(sources))
 
 all: en
 
-en: cv.pdf
+en: cv.pdf coverletter.pdf
 
 $(name).tex:
 	echo "\input{main.tex}" > $@
 
 $(name).log $(name).fls: $(name).pdf
 
-cv.pdf: cv.tex $(sources) img
+%.pdf: %.tex $(sources) img
 	-$(latexmk) -pdf \
 		   -latexoption="-halt-on-error -shell-escape" \
 		   -bibtex \
